@@ -52,11 +52,11 @@ export default {
             this.$message.error('登录失败')
           } else {
             this.loginForm = res.data
-            this.$message.success('登录成功')
             // 将登录的token保存到sessionStorage
             // window.sessionStorage.setItem('token', res.data.token)
             localStorage.setItem('token', res.data.token)
             this.$router.push('/home')
+            this.$message.success('登录成功')
           }
         }
       })
